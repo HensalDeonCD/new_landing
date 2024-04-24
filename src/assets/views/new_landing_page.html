@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>landing_page</title>
+    <link href="../../../dist/output.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Starting of Header -->
+    <header class="new-header">
+      <!-- large screens -->
+      <nav class="w-full hidden lg:block">
+        <div
+          class="absolute bg-white w-full h-96 left-0 top-0 right-0 -z-10 transform -translate-y-full"
+          id="header-bg"
+        ></div>
+        <div class="container">
+          <div class="items">
+            <a href="#/" class="lg:h-[80px] h-[60px] relative">
+              <img
+                class="w-full h-full logo1"
+                src="../img/logo.svg"
+                alt="logo"
+              />
+              <img
+                class="w-full h-full hidden logo2"
+                src="../img/logo_light.svg"
+                alt="logo"
+              />
+            </a>
+            <div class="header-area">
+              <ul class="flex flex-row gap-x-10" data-class="head">
+                <li class="tabs" id="trade">
+                  Trade
+                  <div class="hidden headselected-div">
+                    <div class="flex absolute top-0 left-0 mt-20 gap-6">
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Markets</a></li>
+                        <li><a href="#">Account Types</a></li>
+                        <li><a href="#">Open Live Account </a></li>
+                        <li><a href="#">Deposit & Withdrawal</a></li>
+                        <li><a href="#">Practice Accounts</a></li>
+                      </ul>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Accounts</a></li>
+                        <li><a href="#">Account Types</a></li>
+                        <li><a href="#">Open Live Account </a></li>
+                        <li><a href="#">Deposit & Withdrawal</a></li>
+                        <li><a href="#">Practice Accounts</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="tabs" id="discover">
+                  Discover
+                  <div class="hidden headselected-div">
+                    <div class="flex absolute top-0 left-0 mt-20 gap-6">
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Markets</a></li>
+                        <li><a href="#">Deposit & Withdrawal</a></li>
+                        <li><a href="#">Practice Accounts</a></li>
+                      </ul>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Accounts</a></li>
+                        <li><a href="#">Account Types</a></li>
+                        <li><a href="#">Practice Accounts</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="tabs" id="learn">
+                  Learn
+                  <div class="hidden headselected-div">
+                    <div class="flex absolute top-0 left-0 mt-20 gap-6">
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Markets</a></li>
+                        <li><a href="#">Test Data</a></li>
+                        <li><a href="#">Test Data</a></li>
+                        <li><a href="#">Test Data</a></li>
+                      </ul>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Accounts</a></li>
+                        <li><a href="#">Test Data</a></li>
+                        <li><a href="#">Practice Accounts</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="head-btn">
+            <a href="#"> Client Area </a>
+            <a href="#"> Partners Portal </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- small screens -->
+      <nav class="w-full lg:hidden block">
+        <div class="flex flex-row justify-between h-full items-center">
+          <a href="#/" class="trust-logo">
+            <img class="w-full h-full" src="../img/logo_light.svg" alt="logo" />
+          </a>
+          <span
+            class="material-symbols-outlined text-white cursor-pointer"
+            id="mobileMenuButton"
+          >
+            menu
+          </span>
+        </div>
+        <div class="bg-white absolute left-0 w-screen z-10" id="mainMenu">
+          <div class="header-area flex flex-col md:mx-10 mx-6">
+            <ul class="flex flex-col gap-3">
+              <li class="lists tab-click relative" id="sm-markets">
+                Markets<span class="material-symbols-outlined">
+                  arrow_drop_down
+                </span>
+                <ul
+                  class="dropdown-menu hidden selected-div double-tap"
+                  data-value="sm-markets"
+                >
+                  <li><a href="#">Forex</a></li>
+                  <li><a href="#">Metals</a></li>
+                  <li><a href="#">Commodities</a></li>
+                  <li><a href="#">Indices</a></li>
+                  <li><a href="#">Energies</a></li>
+                  <li><a href="#">Share</a></li>
+                  <li><a href="#">All Instruments</a></li>
+                </ul>
+              </li>
+              <li class="lists tab-click" id="sm-accounts">
+                Accounts<span class="material-symbols-outlined">
+                  arrow_drop_down
+                </span>
+                <ul
+                  class="dropdown-menu hidden selected-div double-tap"
+                  data-value="sm-accounts"
+                >
+                  <li><a href="#">Account Types</a></li>
+                  <li><a href="#">Open Live Account </a></li>
+                  <li><a href="#">Deposit & Withdrawal</a></li>
+                  <li><a href="#">Practice Accounts</a></li>
+                </ul>
+              </li>
+              <li class="lists tab-click" id="sm-tools">
+                Tools<span class="material-symbols-outlined">
+                  arrow_drop_down
+                </span>
+                <ul
+                  class="dropdown-menu hidden selected-div double-tap"
+                  data-value="sm-tools"
+                >
+                  <li><a href="#">Calculators</a></li>
+                  <li><a href="#">Dynamic Leverage</a></li>
+                  <li><a href="#">Metatrader Platforms</a></li>
+                  <li><a href="#">Economic Calendar</a></li>
+                  <li><a href="#">Rollover Schedule</a></li>
+                  <li><a href="#">Holiday Schedule</a></li>
+                  <li><a href="#">Dividend Schedule</a></li>
+                </ul>
+              </li>
+              <li class="lists tab-click" id="sm-learntotrade">
+                Learn to Trade<span class="material-symbols-outlined">
+                  arrow_drop_down
+                </span>
+                <ul
+                  class="dropdown-menu hidden selected-div double-tap"
+                  data-value="sm-learntotrade"
+                >
+                  <li><a href="#">Forex Semiar</a></li>
+                  <li><a href="#">Forex Mentor</a></li>
+                  <li><a href="#">Financial Glossary</a></li>
+                </ul>
+              </li>
+              <li class="lists tab-click" id="sm-about">
+                About Us<span class="material-symbols-outlined">
+                  arrow_drop_down
+                </span>
+                <ul
+                  class="dropdown-menu hidden selected-div double-tap"
+                  data-value="sm-about"
+                >
+                  <li><a href="#">About Trsut Capital</a></li>
+                  <li><a href="#">Legal Documentation</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </li>
+              <li class="lists tab-click" id="sm-partnership">
+                Partnership<span class="material-symbols-outlined">
+                  arrow_drop_down
+                </span>
+                <ul
+                  class="dropdown-menu hidden selected-div double-tap"
+                  data-value="sm-partnership"
+                >
+                  <li><a href="#">Members Area</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="mx-6 my-3">
+            <button
+              class="bg-[#52FF00] px-5 py-3 border-1 border-[#52FF00] rounded-3xl hover:text-white hover:bg-[#41CC00] transition-all"
+            >
+              Client Area
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Ending of header -->
+
+    <!-- Starting of Hero Section -->
+    <main class="relative video-container">
+      <section class="hero-section">
+        <div class="item-container container m-auto">
+          <div class="relative h-fit">
+            <svg
+              class="md:w-2/3 w-full h-fit mx-auto max-w-6xl overflow-visible"
+              width="1089"
+              height="239"
+              viewBox="0 0 1089 239"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_12364_11822)">
+                <path
+                  class="trust"
+                  d="M0 0.0214844H208.222V59.8088H137.691V239.149H70.5311V59.8088H0V0.0214844Z"
+                  stroke="#56B951"
+                  stroke-width="2.17487"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  class="trust"
+                  d="M410.615 183.059L411.964 214.964C412.399 224.816 414.421 232.885 418.01 239.149H348.827C346.13 233.994 344.565 225.947 344.13 214.964L343.129 187.757C342.672 175.664 339.932 167.443 334.908 163.072C329.862 158.7 321.75 156.525 310.549 156.525H275.621V239.149H208.461V0.0214844H326.013C356.461 0.0214844 378.971 6.63313 393.521 19.8346C407.853 33.2753 415.009 50.2828 415.009 70.8789C415.009 83.1887 411.812 94.2806 405.439 104.133C399.067 113.985 389.824 121.597 377.731 126.969C389.824 131.449 398.153 137.93 402.742 146.456C407.331 154.959 409.963 167.161 410.637 183.059H410.615ZM275.599 52.3925V107.482H315.9C335.822 107.482 345.782 98.304 345.782 79.9481C345.782 61.5921 335.822 52.4142 315.9 52.4142H275.599V52.3925Z"
+                  stroke="#56B951"
+                  stroke-width="2.17487"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  class="trust"
+                  d="M671.579 239.127H600.374L590.283 207.896L545.785 173.968L496.567 207.896L486.498 239.127H417.989L502.962 0H583.562L671.558 239.127H671.579ZM531.518 97.4125L514.053 152.502H572.166L554.354 97.4125C548.09 78.1649 544.284 65.5072 542.936 59.461C537.346 78.0562 533.54 90.6922 531.518 97.4125Z"
+                  stroke="#56B951"
+                  stroke-width="2.17487"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  class="trust"
+                  d="M671.579 0.0217036H776.038C817.448 0.0217036 848.462 10.7656 869.058 32.2533C889.654 53.9803 899.963 83.0801 899.963 119.574C899.963 156.069 889.654 185.19 869.058 206.896C848.462 228.383 817.448 239.127 776.038 239.127H671.579V0V0.0217036ZM738.739 182.711H774.668C811.619 182.711 830.084 161.658 830.084 119.574C830.084 77.4907 811.619 56.4379 774.668 56.4379H738.739V182.711Z"
+                  stroke="#56B951"
+                  stroke-width="2.17487"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  class="trust"
+                  d="M1088.7 0.0214844V59.8088H967.123V91.3879H1077.95V147.152H967.123V179.383H1088.7V239.171H899.941V0.0432543H1088.7V0.0214844Z"
+                  stroke="#56B951"
+                  stroke-width="2.17487"
+                  stroke-miterlimit="10"
+                />
+              </g>
+              <path
+                class="opacity-0"
+                id="symbol"
+                d="M543.641 43L486.5 238L547.539 196.7L601 239L543.641 43Z"
+                fill="#56B953"
+              />
+              <defs>
+                <clipPath id="clip0_12364_11822">
+                  <rect width="1089" height="239" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <svg
+              class="trust-2 md:w-2/3 w-full h-fit mx-auto max-w-6xl lg:mt-12 sm:mt-8 mt-6"
+              width="995"
+              height="128"
+              viewBox="0 0 995 128"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.964691 0.342806H56.7251C78.838 0.342806 95.3928 6.08021 106.389 17.555C117.386 29.1493 122.884 44.6881 122.884 64.1714C122.884 83.6547 117.386 99.1935 106.389 110.788C95.3928 122.263 78.838 128 56.7251 128H0.964691V0.342806ZM36.8235 97.8786H56.0079C75.7302 97.8786 85.5914 86.6429 85.5914 64.1714C85.5914 41.6999 75.7302 30.4642 56.0079 30.4642H36.8235V97.8786ZM171.294 128H135.435V0.342806H171.294V128ZM286.365 0.342806V32.2571H225.047V48.9314H282.421V79.0528H225.047V128H189.188V0.342806H286.365ZM394.222 0.342806V32.2571H332.903V48.9314H390.277V79.0528H332.903V128H297.045V0.342806H394.222ZM505.664 0.342806V32.2571H440.76V49.1107H499.927V78.8735H440.76V96.0857H505.664V128H404.901V0.342806H505.664ZM626.996 98.0579L627.713 115.091C627.952 120.35 629.028 124.653 630.94 128H594.006C592.571 125.251 591.735 120.948 591.495 115.091L590.958 100.568C590.719 94.1135 589.224 89.7507 586.475 87.4796C583.846 85.089 579.543 83.8937 573.566 83.8937H554.92V128H519.061V0.342806H581.814C598.07 0.342806 610.082 3.86892 617.852 10.9211C625.502 18.0929 629.326 27.1771 629.326 38.1738C629.326 44.7479 627.593 50.6646 624.127 55.9239C620.78 61.1832 615.879 65.2472 609.425 68.1159C615.879 70.5064 620.302 73.9728 622.693 78.5149C625.203 83.057 626.637 89.5714 626.996 98.0579ZM554.92 28.3126V57.7168H576.435C587.073 57.7168 592.392 52.8161 592.392 43.0147C592.392 33.2133 587.073 28.3126 576.435 28.3126H554.92ZM743.439 0.342806V32.2571H678.534V49.1107H737.701V78.8735H678.534V96.0857H743.439V128H642.675V0.342806H743.439ZM838.414 21.1409V0.342806H872.48V128H834.649L807.575 82.6387C800.284 70.3272 794.427 59.8086 790.005 51.083C790.602 68.6537 790.901 87.3601 790.901 107.202V128H756.835V0.342806H794.666L821.74 45.7041C828.194 56.7008 834.051 67.2792 839.31 77.4391C838.713 59.8684 838.414 41.1023 838.414 21.1409ZM883.258 0.342806H994.421V32.2571H956.769V128H920.91V32.2571H883.258V0.342806Z"
+                fill="#51BA54"
+              />
+            </svg>
+
+            <p class="trust-diff trust-2">Trust the difference</p>
+            <div
+              class="w-full h-fit flex flex-col justify-center items-center mx-auto max-w-6xl text-center text-white trust"
+            >
+              <p class="res-text lg:mt-14 sm:mt-10 mt-8 trust-2">
+                Get into the world of financial possibilities
+              </p>
+              <a href="" class="trading trust-2">Start Trading Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Ending of Hero Section -->
+      <!-- Start of Top scroll bar -->
+      <section class="quoteContainer">
+        <div class="quotes">
+          <div class="quote">
+            <span class="images">
+              <img class="r-img rounded-full" src="../img/US.svg" alt="" />
+              <img class="l-img rounded-full" src="../img/EU.svg" alt=""
+            /></span>
+            <span class="qinfo">EURUSD</span>
+            <span class="qinfo">1.09019</span>
+            <span class="text-[#47F8C3]">+0%</span>
+          </div>
+          <div class="quote">
+            <span class="images">
+              <img class="r-img rounded-full" src="../img/US.svg" alt="" />
+              <img class="l-img rounded-full" src="../img/EU.svg" alt="" />
+            </span>
+            <span class="qinfo">EURUSD</span>
+            <span class="qinfo">1.09019</span>
+            <span class="text-[#47F8C3]">+3%</span>
+          </div>
+          <div class="quote">
+            <span class="images">
+              <img class="r-img rounded-full" src="../img/US.svg" alt="" />
+              <img class="l-img rounded-full" src="../img/EU.svg" alt="" />
+            </span>
+            <span class="qinfo">EURUSD</span>
+            <span class="qinfo">1.09019</span>
+            <span class="text-[#F84752]">+0%</span>
+          </div>
+          <div class="quote">
+            <span class="images">
+              <img src="../img/aal (1).svg" alt="" />
+            </span>
+            <span class="qinfo">EURUSD</span>
+            <span class="qinfo">1.09019</span>
+            <span class="text-[#F84752]">+10%</span>
+          </div>
+          <div class="quote">
+            <span class="images">
+              <img src="../img/aal (1).svg" alt="" />
+            </span>
+            <span class="qinfo">EURUSD</span>
+            <span class="qinfo">1.09019</span>
+            <span class="text-[#F84752]">+10%</span>
+          </div>
+          <div class="quote">
+            <span class="images">
+              <img src="../img/aal (1).svg" alt="" />
+            </span>
+            <span class="qinfo">EURUSD</span>
+            <span class="qinfo">1.09019</span>
+            <span class="text-[#47F8C3]">+10%</span>
+          </div>
+          <div class="quote">
+            <span class="images">
+              <img src="../img/ko.svg" alt="" />
+            </span>
+            <span class="qinfo">KMI</span>
+            <span class="qinfo">1.09019</span>
+            <span class="text-[#F84752]">+10%</span>
+          </div>
+          <div class="quote">
+            <span class="images">
+              <img src="../img/ko.svg" alt="" />
+            </span>
+            <span class="qinfo">KMI</span>
+            <span class="qinfo">1.09019</span>
+            <span class="text-[#47F8C3]">+10%</span>
+          </div>
+        </div>
+        <div class="quotes">
+          <div class="quote">
+            <span class="images">
+              <img class="r-img rounded-full" src="../img/US.svg" alt="" />
+              <img class="l-img rounded-full" src="../img/EU.svg" alt=""
+            /></span>
+            <span class="qinfo">EURUSD</span>
+            <span class="qinfo">1.09019</span>
+            <span class="text-[#47F8C3]">+0%</span>
+          </div>
+          <div class="quote">
+            <span class="images">
+              <img class="r-img rounded-full" src="../img/US.svg" alt="" />
+              <img class="l-img rounded-full" src="../img/EU.svg" alt="" />
+            </span>
+            <span class="qinfo">EURUSD</span>
+            <span class="qinfo">1.09019</span>
+            <span class="text-[#47F8C3]">+3%</span>
+          </div>
+          <div class="quote">
+            <span class="images">
+              <img class="r-img rounded-full" src="../img/US.svg" alt="" />
+              <img class="l-img rounded-full" src="../img/EU.svg" alt="" />
+            </span>
+            <span class="qinfo">EURUSD</span>
+            <span class="qinfo">1.09019</span>
+            <span class="text-[#F84752]">+0%</span>
+          </div>
+          <div class="quote">
+            <span class="images">
+              <img src="../img/aal (1).svg" alt="" />
+            </span>
+            <span class="qinfo">EURUSD</span>
+            <span class="qinfo">1.09019</span>
+            <span class="text-[#F84752]">+10%</span>
+          </div>
+          <div class="quote">
+            <span class="images">
+              <img src="../img/aal (1).svg" alt="" />
+            </span>
+            <span class="qinfo">EURUSD</span>
+            <span class="qinfo">1.09019</span>
+            <span class="text-[#F84752]">+10%</span>
+          </div>
+          <div class="quote">
+            <span class="images">
+              <img src="../img/aal (1).svg" alt="" />
+            </span>
+            <span class="qinfo">EURUSD</span>
+            <span class="qinfo">1.09019</span>
+            <span class="text-[#47F8C3]">+10%</span>
+          </div>
+          <div class="quote">
+            <span class="images">
+              <img src="../img/ko.svg" alt="" />
+            </span>
+            <span class="qinfo">KMI</span>
+            <span class="qinfo">1.09019</span>
+            <span class="text-[#F84752]">+10%</span>
+          </div>
+          <div class="quote">
+            <span class="images">
+              <img src="../img/ko.svg" alt="" />
+            </span>
+            <span class="qinfo">KMI</span>
+            <span class="qinfo">1.09019</span>
+            <span class="text-[#47F8C3]">+10%</span>
+          </div>
+        </div>
+      </section>
+      <!-- End of Top scroll bar -->
+      <video
+        class="hero-video invisible"
+        id="hero-video"
+        src="../video/hero_banner.mp4"
+        loop
+        muted
+        autoplay
+      ></video>
+    </main>
+
+    <section class="section-padding container m-auto padding">
+      <div class="instruments">
+        <div class="items">
+          <div class="sm:block hidden size-full">
+            <div class="flex-col-center size-full gap-4">
+              <div class="ins-item" data-item="1">
+                <img
+                  class="normal"
+                  src="../img/new_landing/stocks_text.svg"
+                  alt="stocks"
+                />
+                <img
+                  class="highlighted"
+                  src="../img/new_landing/stocks_h_text.svg"
+                  alt="stocks"
+                />
+              </div>
+              <div class="ins-item" data-item="2">
+                <img
+                  class="normal"
+                  src="../img/new_landing/forex_text.svg"
+                  alt="forex"
+                />
+                <img
+                  class="highlighted"
+                  src="../img/new_landing/forex_h_text.svg"
+                  alt="forex"
+                />
+              </div>
+              <div class="ins-item" data-item="3">
+                <img
+                  class="normal"
+                  src="../img/new_landing/commodities_text.svg"
+                  alt="commodities"
+                />
+                <img
+                  class="highlighted"
+                  src="../img/new_landing/commodities_h_text.svg"
+                  alt="commodities"
+                />
+              </div>
+              <div class="ins-item" data-item="4">
+                <img
+                  class="normal"
+                  src="../img/new_landing/indices_text.svg"
+                  alt="indices"
+                />
+                <img
+                  class="highlighted"
+                  src="../img/new_landing/indices_h_text.svg"
+                  alt="indices"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="content-section">
+            <div class="flex-col-center sm_effect" data-item="1">
+              <img
+                class="object-cover md:w-2/3 w-full m-auto"
+                src="../img/new_landing/stocks_c.png"
+                alt=""
+              />
+              <h1>Liquid currency pairs</h1>
+              <p>
+                Trade the world's most liquid currency pairs with tight spreads
+                and zero commission on major asset classes
+              </p>
+              <a href="#"
+                >Learn More
+                <span class="material-symbols-outlined">
+                  trending_flat
+                </span></a
+              >
+            </div>
+            <div class="flex-col-center abs-item sm_effect" data-item="2">
+              <img
+                class="object-cover md:w-2/3 w-full m-auto"
+                src="../img/new_landing/forex_c.png"
+                alt=""
+              />
+              <h1>80+ companies</h1>
+              <p>
+                Buy and sell stocks of 80+ companies such as Amazon, Tesla,
+                Microsoft, Netflix and more
+              </p>
+              <a href="#"
+                >Learn More
+                <span class="material-symbols-outlined">
+                  trending_flat
+                </span></a
+              >
+            </div>
+            <div class="flex-col-center abs-item sm_effect" data-item="3">
+              <img
+                class="object-cover md:w-2/3 w-full m-auto"
+                src="../img/new_landing/commodities_c.png"
+                alt=""
+              />
+              <h1>Trade commodities</h1>
+              <p>
+                Trade commodities such as Gold, Silver, Coffee, Crudeoil,
+                Natural Gas, Soyabean and Platinum
+              </p>
+              <a href="#"
+                >Learn More
+                <span class="material-symbols-outlined">
+                  trending_flat
+                </span></a
+              >
+            </div>
+            <div class="flex-col-center abs-item sm_effect" data-item="4">
+              <img
+                class="object-cover md:w-2/3 w-full m-auto"
+                src="../img/new_landing/indices_c.png"
+                alt=""
+              />
+              <h1>Diversify your portfolio</h1>
+              <p>
+                Diversify your portfolio with indices trading. Trade S&P,
+                Nasdaq, Dow Jones and DAX
+              </p>
+              <a href="#"
+                >Learn More
+                <span class="material-symbols-outlined">
+                  trending_flat
+                </span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Ending of Hero Section -->
+
+    <!-- Starting of account opening -->
+    <section class="section-padding container m-auto padding">
+      <div class="flex w-full justify-end">
+        <img
+          class="md:w-2/3 w-full"
+          src="../img/new_landing/account_opening_text.svg"
+          alt=""
+        />
+      </div>
+      <br />
+      <hr />
+      <br />
+      <div class="acc-opening">
+        <div class="items">
+          <div class="video-items">
+            <div class="video-section" data-item="1">
+              <img
+                class="sm_acc_text"
+                src="../img/new_landing/acc1_sm_text.svg"
+                alt=""
+              />
+              <div class="video">
+                <video src="../video/acc_es.mp4" autoplay loop muted></video>
+              </div>
+              <p>
+                <b>Initiate</b> your trading experience by quickly setting up
+                your account with necessary documents and a simple
+                questionnaire.
+              </p>
+            </div>
+            <div class="video-section abs-items" data-item="2">
+              <img
+                class="sm_acc_text"
+                src="../img/new_landing/acc2_sm_text.svg"
+                alt=""
+              />
+              <div class="video">
+                <video
+                  class=""
+                  src="../video/acc_ff.mp4"
+                  autoplay
+                  loop
+                  muted
+                ></video>
+              </div>
+              <p>
+                <b>Flexible Funding</b> Choose from a variety of funding
+                methods, including credit cards, bank transfers, and more, for
+                convenient deposits and withdrawals.
+              </p>
+            </div>
+            <div class="video-section abs-items" data-item="3">
+              <img
+                class="sm_acc_text"
+                src="../img/new_landing/acc3_sm_text.svg"
+                alt=""
+              />
+              <div class="video">
+                <video
+                  class=""
+                  src="../video/acc_ex_se.mp4"
+                  autoplay
+                  loop
+                  muted
+                ></video>
+              </div>
+              <p>
+                <b>Trade with confidence</b> on MetaTrader, offering access to
+                over 200 instruments, from stocks to forex, ensuring a
+                diversified investment portfolio.
+              </p>
+            </div>
+          </div>
+          <div class="sm:block hidden">
+            <div class="flex-col-center gap-6">
+              <div class="accs" data-item="1">
+                <img
+                  class="normal"
+                  src="../img/new_landing/acc1_text.svg"
+                  alt=""
+                />
+                <img
+                  class="highlighted"
+                  src="../img/new_landing/acc1_h_text.svg"
+                  alt=""
+                />
+              </div>
+              <div class="accs" data-item="2">
+                <img
+                  class="normal"
+                  src="../img/new_landing/acc2_text.svg"
+                  alt=""
+                />
+                <img
+                  class="highlighted"
+                  src="../img/new_landing/acc2_h_text.svg"
+                  alt=""
+                />
+              </div>
+              <div class="accs" data-item="3">
+                <img
+                  class="normal"
+                  src="../img/new_landing/acc3_text.svg"
+                  alt=""
+                />
+                <img
+                  class="highlighted"
+                  src="../img/new_landing/acc3_h_text.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Ending of account opening -->
+
+    <!-- Starting of cards -->
+    <section class="section-padding padding container m-auto">
+      <div class="flex w-full">
+        <img
+          class="object-contain md:w-2/3 w-full"
+          src="../img/new_landing/cards.svg"
+          alt="cards"
+        />
+      </div>
+      <div class="relative pt-12">
+        <div class="scroll-cards">
+          <div class="card card-1">
+            <div class="marker hidden">
+              <div class="contain">
+                <span> Maximize Your Trade Potential</span>
+                <span class="num bg-green-500">01</span>
+              </div>
+            </div>
+            <div class="item">
+              <div class="sm:w-[80%] w-full card-content">
+                <div class="w-[40%] item-content py-4">
+                  <video
+                    class="object-cover rounded-xl"
+                    src="../video/mtp.mp4"
+                    loop
+                    muted
+                    autoplay
+                  ></video>
+                </div>
+                <div class="w-[60%] item-content p-4">
+                  <h3>Maximize your <br />Trade Potential</h3>
+                  <p>
+                    With a 1:5 leverage, we amplify your trading potential by 5
+                    times! Trade more confidently in the dynamic world of
+                    stocks, and we're here to support you at every turn.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-2">
+            <div class="marker">
+              <div class="contain">
+                <span>Diverse Stock Portfolio</span>
+                <span class="num bg-violet-500">02</span>
+              </div>
+            </div>
+            <div class="item hidden">
+              <div class="sm:w-[90%] w-full card-content">
+                <div class="w-[40%] item-content">
+                  <video
+                    class="object-cover rounded-xl"
+                    src="../video/diverse_stock.mp4"
+                    loop
+                    muted
+                    autoplay
+                  ></video>
+                </div>
+                <div class="w-[60%] item-content p-4">
+                  <h3>Diverse Stock <br />Portfolio</h3>
+                  <p>
+                    Explore stocks from 100+ different top companies. From tech
+                    giants to established market leaders, Trust Capital provides
+                    you with a diverse range of stocks to build a portfolio that
+                    aligns with your unique requirements.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-3">
+            <div class="marker">
+              <div class="contain">
+                <span>Safe & Secure - FSA Regulated</span>
+                <span class="num bg-green-500">03</span>
+              </div>
+            </div>
+            <div class="item hidden">
+              <div class="w-full card-content">
+                <div class="w-[40%] item-content">
+                  <video
+                    class="object-cover rounded-xl"
+                    src="../video/fsa.mp4"
+                    loop
+                    muted
+                    autoplay
+                  ></video>
+                </div>
+                <div class="w-[60%] item-content p-4">
+                  <h3>
+                    Safe & Secure <br />
+                    FSA Regulated
+                  </h3>
+                  <p>
+                    Your peace of mind is our top priority. Trust Capital is
+                    proud to be regulated by the Financial Services Authority
+                    (FSA), offering you a safety net in the ever-changing stock
+                    market.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Ending of cards -->
+
+    <!-- Starting of trading products -->
+    <section class="section-padding padding container m-auto">
+      <div class="flex w-full">
+        <img
+          class="object-contain md:w-2/3 w-full"
+          src="../img/new_landing/trading_products.svg"
+          alt=""
+        />
+      </div>
+      <div class="mt-12 new-table">
+        <div class="pj400 p-2 max-w-full w-fit">
+          <nav class="drop-shad-green rounded-xl overflow-x-scroll">
+            <ul class="trade-pdt" data-class="pdts">
+              <li class="active tab-click" id="Trending">Trending</li>
+              <li class="tab-click" id="Shares">Shares</li>
+              <li class="tab-click" id="Forex">Forex</li>
+              <li class="tab-click" id="Metals">Metals</li>
+              <li class="tab-click" id="Indices">Indices</li>
+              <li class="tab-click" id="Commodities">Commodities</li>
+            </ul>
+          </nav>
+          <div class="flex">
+            <div class="overflow-x-auto drop-shad-green rounded-xl mt-8">
+              <table class="bg-white">
+                <thead>
+                  <tr>
+                    <th>Instrument</th>
+                    <th>Price</th>
+                    <th>Daily Change</th>
+                    <th>Daily Change %</th>
+                    <th>Trend</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="quote">
+                        <span class="images">
+                          <img
+                            class="r-img rounded-full"
+                            src="../img/US.svg"
+                            alt="" />
+                          <img
+                            class="l-img rounded-full"
+                            src="../img/EU.svg"
+                            alt=""
+                        /></span>
+                        <span>EUR</span>
+                      </div>
+                    </td>
+                    <td><span>13.20</span></td>
+                    <td><span class="text-green-600">0</span></td>
+                    <td><span class="text-green-600">0.00%</span></td>
+                    <td><img class="max-w-5" src="../img/up.png" alt="" /></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="quote">
+                        <span class="images">
+                          <img
+                            class="r-img rounded-full"
+                            src="../img/US.svg"
+                            alt="" />
+                          <img
+                            class="l-img rounded-full"
+                            src="../img/EU.svg"
+                            alt=""
+                        /></span>
+                        <span>EURUSD</span>
+                      </div>
+                    </td>
+                    <td><span>13.20</span></td>
+                    <td><span class="text-green-600">0</span></td>
+                    <td><span class="text-green-600">0.00%</span></td>
+                    <td><img class="max-w-5" src="../img/up.png" alt="" /></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Ending of trading products -->
+
+    <!-- Starting of Platforms -->
+    <section class="platforms relative lg:max-h-[70%]">
+      <div class="flex-col-center">
+        <video 
+          class="m-auto object-cover "
+          src="../video/platforms_banner.mp4"
+          autoplay
+          muted
+          loop
+        ></video>
+        <div
+          class="platform-footer container m-auto sub-section-padding padding"
+        >
+          <div class="item">
+            <img src="../img/new_landing/scripts.svg" alt="" />
+            <div>
+              <p class="res-text-sm">Scripts</p>
+              <p class="text-sm">Effortless Trading with Scripts</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../img/new_landing/eas.svg" alt="" />
+            <div>
+              <p class="res-text-sm">Expert Advisors (EAs)</p>
+              <p class="text-sm">Powerful Expert Advisors (EAs)</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../img/new_landing/custom_indicators.svg" alt="" />
+            <div>
+              <p class="res-text-sm">Custom Indicators</p>
+              <p class="text-sm">Tailor-Made Charts with Custom Indicators</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../img/new_landing/librarys.svg" alt="" />
+            <div>
+              <p class="res-text-sm">Libraries</p>
+              <p class="text-sm">Extensive Library of Resources</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="platforms relative sub-section-padding padding">
+      <div class="container m-auto flex-col-center">
+        <h5>Trade Like a Pro with the Power of</h5>
+        <h1>Meta Trader 4/5</h1>
+        <h5>
+          Execute trades, analyze markets, and develop advanced strategies!
+        </h5>
+        <video
+          class="lg:max-w-[70%] m-auto"
+          src="../video/platforms_banner.mp4"
+          autoplay
+          muted
+          loop
+        ></video>
+        <div class="platform-footer">
+          <div class="item">
+            <img src="../img/new_landing/scripts.svg" alt="" />
+            <div>
+              <p class="res-text-sm">Scripts</p>
+              <p class="text-sm">Effortless Trading with Scripts</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../img/new_landing/eas.svg" alt="" />
+            <div>
+              <p class="res-text-sm">Expert Advisors (EAs)</p>
+              <p class="text-sm">Powerful Expert Advisors (EAs)</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../img/new_landing/custom_indicators.svg" alt="" />
+            <div>
+              <p class="res-text-sm">Custom Indicators</p>
+              <p class="text-sm">Tailor-Made Charts with Custom Indicators</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../img/new_landing/librarys.svg" alt="" />
+            <div>
+              <p class="res-text-sm">Libraries</p>
+              <p class="text-sm">Extensive Library of Resources</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- Ending of Platforms -->
+    <!-- Starting of Review -->
+    <section class="review">
+      <div class="review-container container m-auto">
+        <div class="size-full flex items-center">
+          <img
+            class="m-auto md:w-2/3 w-full"
+            src="../img/new_landing/review.svg"
+            alt="review"
+          />
+        </div>
+        <div class="review-scroll relative">
+          <div class="scroller">
+            <div class="items slide">
+              <div class="review-card">
+                <div class="flex flex-wrap gap-4">
+                  <div class="max-w-11">
+                    <img
+                      class="object-contain rounded-full"
+                      src="../img/avatar1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="cd600">Aravind Pandey</h3>
+                    <p class="text-sm">@Sam.Payne90</p>
+                    <div class="flex w-full">
+                      <svg
+                        class="size-full"
+                        width="57"
+                        height="18"
+                        viewBox="0 0 47 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.75406 5.67921L6.07407 7.06647L5.45841 4.45188L7.50812 2.6927L4.80895 2.46211L3.75406 0L2.69917 2.46211L0 2.6927L2.04596 4.45188L1.43405 7.06647L3.75406 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M13.4689 5.67921L15.7889 7.06647L15.1732 4.45188L17.223 2.6927L14.5238 2.46211L13.4689 0L12.414 2.46211L9.71484 2.6927L11.7608 4.45188L11.1489 7.06647L13.4689 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M23.1877 5.67921L25.5077 7.06647L24.892 4.45188L26.9417 2.6927L24.2425 2.46211L23.1877 0L22.1328 2.46211L19.4336 2.6927L21.4796 4.45188L20.8676 7.06647L23.1877 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M32.9025 5.67921L35.2225 7.06647L34.6068 4.45188L36.6566 2.6927L33.9574 2.46211L32.9025 0L31.8476 2.46211L29.1484 2.6927L31.1944 4.45188L30.5825 7.06647L32.9025 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M42.6212 4.98372V1.52487L43.2632 3.0237L44.9075 3.16131L43.6611 4.23616L44.0328 5.82798L42.6212 4.98372ZM46.3753 2.6927L43.6761 2.46583L42.6212 0L41.5664 2.46583L38.8672 2.6927L40.9132 4.45188L40.3012 7.06647L42.6212 5.67921L44.9413 7.06647L44.3256 4.45188L46.3753 2.6927Z"
+                          fill="#FCD34D"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="texts">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                    aliquam, purus sit amet luctus venenatis, lectus magna
+                  </p>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="flex flex-wrap gap-4">
+                  <div class="max-w-11">
+                    <img
+                      class="object-contain rounded-full"
+                      src="../img/avatar1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="cd600">Aravind Pandey</h3>
+                    <p class="text-sm">@Sam.Payne90</p>
+                    <div class="flex w-full">
+                      <svg
+                        class="size-full"
+                        width="57"
+                        height="18"
+                        viewBox="0 0 47 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.75406 5.67921L6.07407 7.06647L5.45841 4.45188L7.50812 2.6927L4.80895 2.46211L3.75406 0L2.69917 2.46211L0 2.6927L2.04596 4.45188L1.43405 7.06647L3.75406 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M13.4689 5.67921L15.7889 7.06647L15.1732 4.45188L17.223 2.6927L14.5238 2.46211L13.4689 0L12.414 2.46211L9.71484 2.6927L11.7608 4.45188L11.1489 7.06647L13.4689 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M23.1877 5.67921L25.5077 7.06647L24.892 4.45188L26.9417 2.6927L24.2425 2.46211L23.1877 0L22.1328 2.46211L19.4336 2.6927L21.4796 4.45188L20.8676 7.06647L23.1877 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M32.9025 5.67921L35.2225 7.06647L34.6068 4.45188L36.6566 2.6927L33.9574 2.46211L32.9025 0L31.8476 2.46211L29.1484 2.6927L31.1944 4.45188L30.5825 7.06647L32.9025 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M42.6212 4.98372V1.52487L43.2632 3.0237L44.9075 3.16131L43.6611 4.23616L44.0328 5.82798L42.6212 4.98372ZM46.3753 2.6927L43.6761 2.46583L42.6212 0L41.5664 2.46583L38.8672 2.6927L40.9132 4.45188L40.3012 7.06647L42.6212 5.67921L44.9413 7.06647L44.3256 4.45188L46.3753 2.6927Z"
+                          fill="#FCD34D"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="texts">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                    aliquam, purus sit amet luctus venenatis, lectus magna
+                  </p>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="flex flex-wrap gap-4">
+                  <div class="max-w-11">
+                    <img
+                      class="object-contain rounded-full"
+                      src="../img/avatar1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="cd600">Aravind Pandey</h3>
+                    <p class="text-sm">@Sam.Payne90</p>
+                    <div class="flex w-full">
+                      <svg
+                        class="size-full"
+                        width="57"
+                        height="18"
+                        viewBox="0 0 47 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.75406 5.67921L6.07407 7.06647L5.45841 4.45188L7.50812 2.6927L4.80895 2.46211L3.75406 0L2.69917 2.46211L0 2.6927L2.04596 4.45188L1.43405 7.06647L3.75406 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M13.4689 5.67921L15.7889 7.06647L15.1732 4.45188L17.223 2.6927L14.5238 2.46211L13.4689 0L12.414 2.46211L9.71484 2.6927L11.7608 4.45188L11.1489 7.06647L13.4689 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M23.1877 5.67921L25.5077 7.06647L24.892 4.45188L26.9417 2.6927L24.2425 2.46211L23.1877 0L22.1328 2.46211L19.4336 2.6927L21.4796 4.45188L20.8676 7.06647L23.1877 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M32.9025 5.67921L35.2225 7.06647L34.6068 4.45188L36.6566 2.6927L33.9574 2.46211L32.9025 0L31.8476 2.46211L29.1484 2.6927L31.1944 4.45188L30.5825 7.06647L32.9025 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M42.6212 4.98372V1.52487L43.2632 3.0237L44.9075 3.16131L43.6611 4.23616L44.0328 5.82798L42.6212 4.98372ZM46.3753 2.6927L43.6761 2.46583L42.6212 0L41.5664 2.46583L38.8672 2.6927L40.9132 4.45188L40.3012 7.06647L42.6212 5.67921L44.9413 7.06647L44.3256 4.45188L46.3753 2.6927Z"
+                          fill="#FCD34D"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="texts">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                    aliquam, purus sit amet luctus venenatis, lectus magna
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="items slide">
+              <div class="review-card">
+                <div class="flex flex-wrap gap-4">
+                  <div class="max-w-11">
+                    <img
+                      class="object-contain rounded-full"
+                      src="../img/avatar1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="cd600">Aravind Pandey</h3>
+                    <p class="text-sm">@Sam.Payne90</p>
+                    <div class="flex w-full">
+                      <svg
+                        class="size-full"
+                        width="57"
+                        height="18"
+                        viewBox="0 0 47 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.75406 5.67921L6.07407 7.06647L5.45841 4.45188L7.50812 2.6927L4.80895 2.46211L3.75406 0L2.69917 2.46211L0 2.6927L2.04596 4.45188L1.43405 7.06647L3.75406 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M13.4689 5.67921L15.7889 7.06647L15.1732 4.45188L17.223 2.6927L14.5238 2.46211L13.4689 0L12.414 2.46211L9.71484 2.6927L11.7608 4.45188L11.1489 7.06647L13.4689 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M23.1877 5.67921L25.5077 7.06647L24.892 4.45188L26.9417 2.6927L24.2425 2.46211L23.1877 0L22.1328 2.46211L19.4336 2.6927L21.4796 4.45188L20.8676 7.06647L23.1877 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M32.9025 5.67921L35.2225 7.06647L34.6068 4.45188L36.6566 2.6927L33.9574 2.46211L32.9025 0L31.8476 2.46211L29.1484 2.6927L31.1944 4.45188L30.5825 7.06647L32.9025 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M42.6212 4.98372V1.52487L43.2632 3.0237L44.9075 3.16131L43.6611 4.23616L44.0328 5.82798L42.6212 4.98372ZM46.3753 2.6927L43.6761 2.46583L42.6212 0L41.5664 2.46583L38.8672 2.6927L40.9132 4.45188L40.3012 7.06647L42.6212 5.67921L44.9413 7.06647L44.3256 4.45188L46.3753 2.6927Z"
+                          fill="#FCD34D"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="texts">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                    aliquam, purus sit amet luctus venenatis, lectus magna
+                  </p>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="flex flex-wrap gap-4">
+                  <div class="max-w-11">
+                    <img
+                      class="object-contain rounded-full"
+                      src="../img/avatar1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="cd600">Aravind Pandey</h3>
+                    <p class="text-sm">@Sam.Payne90</p>
+                    <div class="flex w-full">
+                      <svg
+                        class="size-full"
+                        width="57"
+                        height="18"
+                        viewBox="0 0 47 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.75406 5.67921L6.07407 7.06647L5.45841 4.45188L7.50812 2.6927L4.80895 2.46211L3.75406 0L2.69917 2.46211L0 2.6927L2.04596 4.45188L1.43405 7.06647L3.75406 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M13.4689 5.67921L15.7889 7.06647L15.1732 4.45188L17.223 2.6927L14.5238 2.46211L13.4689 0L12.414 2.46211L9.71484 2.6927L11.7608 4.45188L11.1489 7.06647L13.4689 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M23.1877 5.67921L25.5077 7.06647L24.892 4.45188L26.9417 2.6927L24.2425 2.46211L23.1877 0L22.1328 2.46211L19.4336 2.6927L21.4796 4.45188L20.8676 7.06647L23.1877 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M32.9025 5.67921L35.2225 7.06647L34.6068 4.45188L36.6566 2.6927L33.9574 2.46211L32.9025 0L31.8476 2.46211L29.1484 2.6927L31.1944 4.45188L30.5825 7.06647L32.9025 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M42.6212 4.98372V1.52487L43.2632 3.0237L44.9075 3.16131L43.6611 4.23616L44.0328 5.82798L42.6212 4.98372ZM46.3753 2.6927L43.6761 2.46583L42.6212 0L41.5664 2.46583L38.8672 2.6927L40.9132 4.45188L40.3012 7.06647L42.6212 5.67921L44.9413 7.06647L44.3256 4.45188L46.3753 2.6927Z"
+                          fill="#FCD34D"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="texts">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                    aliquam, purus sit amet luctus venenatis, lectus magna
+                  </p>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="flex flex-wrap gap-4">
+                  <div class="max-w-11">
+                    <img
+                      class="object-contain rounded-full"
+                      src="../img/avatar1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="cd600">Aravind Pandey</h3>
+                    <p class="text-sm">@Sam.Payne90</p>
+                    <div class="flex w-full">
+                      <svg
+                        class="size-full"
+                        width="57"
+                        height="18"
+                        viewBox="0 0 47 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.75406 5.67921L6.07407 7.06647L5.45841 4.45188L7.50812 2.6927L4.80895 2.46211L3.75406 0L2.69917 2.46211L0 2.6927L2.04596 4.45188L1.43405 7.06647L3.75406 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M13.4689 5.67921L15.7889 7.06647L15.1732 4.45188L17.223 2.6927L14.5238 2.46211L13.4689 0L12.414 2.46211L9.71484 2.6927L11.7608 4.45188L11.1489 7.06647L13.4689 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M23.1877 5.67921L25.5077 7.06647L24.892 4.45188L26.9417 2.6927L24.2425 2.46211L23.1877 0L22.1328 2.46211L19.4336 2.6927L21.4796 4.45188L20.8676 7.06647L23.1877 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M32.9025 5.67921L35.2225 7.06647L34.6068 4.45188L36.6566 2.6927L33.9574 2.46211L32.9025 0L31.8476 2.46211L29.1484 2.6927L31.1944 4.45188L30.5825 7.06647L32.9025 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M42.6212 4.98372V1.52487L43.2632 3.0237L44.9075 3.16131L43.6611 4.23616L44.0328 5.82798L42.6212 4.98372ZM46.3753 2.6927L43.6761 2.46583L42.6212 0L41.5664 2.46583L38.8672 2.6927L40.9132 4.45188L40.3012 7.06647L42.6212 5.67921L44.9413 7.06647L44.3256 4.45188L46.3753 2.6927Z"
+                          fill="#FCD34D"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="texts">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                    aliquam, purus sit amet luctus venenatis, lectus magna
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="scroller">
+            <div class="items slide-opp">
+              <div class="review-card">
+                <div class="flex flex-wrap gap-4">
+                  <div class="max-w-11">
+                    <img
+                      class="object-contain rounded-full"
+                      src="../img/avatar1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="cd600">Aravind Pandey</h3>
+                    <p class="text-sm">@Sam.Payne90</p>
+                    <div class="flex w-full">
+                      <svg
+                        class="size-full"
+                        width="57"
+                        height="18"
+                        viewBox="0 0 47 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.75406 5.67921L6.07407 7.06647L5.45841 4.45188L7.50812 2.6927L4.80895 2.46211L3.75406 0L2.69917 2.46211L0 2.6927L2.04596 4.45188L1.43405 7.06647L3.75406 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M13.4689 5.67921L15.7889 7.06647L15.1732 4.45188L17.223 2.6927L14.5238 2.46211L13.4689 0L12.414 2.46211L9.71484 2.6927L11.7608 4.45188L11.1489 7.06647L13.4689 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M23.1877 5.67921L25.5077 7.06647L24.892 4.45188L26.9417 2.6927L24.2425 2.46211L23.1877 0L22.1328 2.46211L19.4336 2.6927L21.4796 4.45188L20.8676 7.06647L23.1877 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M32.9025 5.67921L35.2225 7.06647L34.6068 4.45188L36.6566 2.6927L33.9574 2.46211L32.9025 0L31.8476 2.46211L29.1484 2.6927L31.1944 4.45188L30.5825 7.06647L32.9025 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M42.6212 4.98372V1.52487L43.2632 3.0237L44.9075 3.16131L43.6611 4.23616L44.0328 5.82798L42.6212 4.98372ZM46.3753 2.6927L43.6761 2.46583L42.6212 0L41.5664 2.46583L38.8672 2.6927L40.9132 4.45188L40.3012 7.06647L42.6212 5.67921L44.9413 7.06647L44.3256 4.45188L46.3753 2.6927Z"
+                          fill="#FCD34D"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="texts">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                    aliquam, purus sit amet luctus venenatis, lectus magna
+                  </p>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="flex flex-wrap gap-4">
+                  <div class="max-w-11">
+                    <img
+                      class="object-contain rounded-full"
+                      src="../img/avatar1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="cd600">Aravind Pandey</h3>
+                    <p class="text-sm">@Sam.Payne90</p>
+                    <div class="flex w-full">
+                      <svg
+                        class="size-full"
+                        width="57"
+                        height="18"
+                        viewBox="0 0 47 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.75406 5.67921L6.07407 7.06647L5.45841 4.45188L7.50812 2.6927L4.80895 2.46211L3.75406 0L2.69917 2.46211L0 2.6927L2.04596 4.45188L1.43405 7.06647L3.75406 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M13.4689 5.67921L15.7889 7.06647L15.1732 4.45188L17.223 2.6927L14.5238 2.46211L13.4689 0L12.414 2.46211L9.71484 2.6927L11.7608 4.45188L11.1489 7.06647L13.4689 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M23.1877 5.67921L25.5077 7.06647L24.892 4.45188L26.9417 2.6927L24.2425 2.46211L23.1877 0L22.1328 2.46211L19.4336 2.6927L21.4796 4.45188L20.8676 7.06647L23.1877 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M32.9025 5.67921L35.2225 7.06647L34.6068 4.45188L36.6566 2.6927L33.9574 2.46211L32.9025 0L31.8476 2.46211L29.1484 2.6927L31.1944 4.45188L30.5825 7.06647L32.9025 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M42.6212 4.98372V1.52487L43.2632 3.0237L44.9075 3.16131L43.6611 4.23616L44.0328 5.82798L42.6212 4.98372ZM46.3753 2.6927L43.6761 2.46583L42.6212 0L41.5664 2.46583L38.8672 2.6927L40.9132 4.45188L40.3012 7.06647L42.6212 5.67921L44.9413 7.06647L44.3256 4.45188L46.3753 2.6927Z"
+                          fill="#FCD34D"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="texts">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                    aliquam, purus sit amet luctus venenatis, lectus magna
+                  </p>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="flex flex-wrap gap-4">
+                  <div class="max-w-11">
+                    <img
+                      class="object-contain rounded-full"
+                      src="../img/avatar1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="cd600">Aravind Pandey</h3>
+                    <p class="text-sm">@Sam.Payne90</p>
+                    <div class="flex w-full">
+                      <svg
+                        class="size-full"
+                        width="57"
+                        height="18"
+                        viewBox="0 0 47 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.75406 5.67921L6.07407 7.06647L5.45841 4.45188L7.50812 2.6927L4.80895 2.46211L3.75406 0L2.69917 2.46211L0 2.6927L2.04596 4.45188L1.43405 7.06647L3.75406 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M13.4689 5.67921L15.7889 7.06647L15.1732 4.45188L17.223 2.6927L14.5238 2.46211L13.4689 0L12.414 2.46211L9.71484 2.6927L11.7608 4.45188L11.1489 7.06647L13.4689 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M23.1877 5.67921L25.5077 7.06647L24.892 4.45188L26.9417 2.6927L24.2425 2.46211L23.1877 0L22.1328 2.46211L19.4336 2.6927L21.4796 4.45188L20.8676 7.06647L23.1877 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M32.9025 5.67921L35.2225 7.06647L34.6068 4.45188L36.6566 2.6927L33.9574 2.46211L32.9025 0L31.8476 2.46211L29.1484 2.6927L31.1944 4.45188L30.5825 7.06647L32.9025 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M42.6212 4.98372V1.52487L43.2632 3.0237L44.9075 3.16131L43.6611 4.23616L44.0328 5.82798L42.6212 4.98372ZM46.3753 2.6927L43.6761 2.46583L42.6212 0L41.5664 2.46583L38.8672 2.6927L40.9132 4.45188L40.3012 7.06647L42.6212 5.67921L44.9413 7.06647L44.3256 4.45188L46.3753 2.6927Z"
+                          fill="#FCD34D"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="texts">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                    aliquam, purus sit amet luctus venenatis, lectus magna
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="items slide-opp">
+              <div class="review-card">
+                <div class="flex flex-wrap gap-4">
+                  <div class="max-w-11">
+                    <img
+                      class="object-contain rounded-full"
+                      src="../img/avatar1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="cd600">Aravind Pandey</h3>
+                    <p class="text-sm">@Sam.Payne90</p>
+                    <div class="flex w-full">
+                      <svg
+                        class="size-full"
+                        width="57"
+                        height="18"
+                        viewBox="0 0 47 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.75406 5.67921L6.07407 7.06647L5.45841 4.45188L7.50812 2.6927L4.80895 2.46211L3.75406 0L2.69917 2.46211L0 2.6927L2.04596 4.45188L1.43405 7.06647L3.75406 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M13.4689 5.67921L15.7889 7.06647L15.1732 4.45188L17.223 2.6927L14.5238 2.46211L13.4689 0L12.414 2.46211L9.71484 2.6927L11.7608 4.45188L11.1489 7.06647L13.4689 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M23.1877 5.67921L25.5077 7.06647L24.892 4.45188L26.9417 2.6927L24.2425 2.46211L23.1877 0L22.1328 2.46211L19.4336 2.6927L21.4796 4.45188L20.8676 7.06647L23.1877 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M32.9025 5.67921L35.2225 7.06647L34.6068 4.45188L36.6566 2.6927L33.9574 2.46211L32.9025 0L31.8476 2.46211L29.1484 2.6927L31.1944 4.45188L30.5825 7.06647L32.9025 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M42.6212 4.98372V1.52487L43.2632 3.0237L44.9075 3.16131L43.6611 4.23616L44.0328 5.82798L42.6212 4.98372ZM46.3753 2.6927L43.6761 2.46583L42.6212 0L41.5664 2.46583L38.8672 2.6927L40.9132 4.45188L40.3012 7.06647L42.6212 5.67921L44.9413 7.06647L44.3256 4.45188L46.3753 2.6927Z"
+                          fill="#FCD34D"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="texts">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                    aliquam, purus sit amet luctus venenatis, lectus magna
+                  </p>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="flex flex-wrap gap-4">
+                  <div class="max-w-11">
+                    <img
+                      class="object-contain rounded-full"
+                      src="../img/avatar1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="cd600">Aravind Pandey</h3>
+                    <p class="text-sm">@Sam.Payne90</p>
+                    <div class="flex w-full">
+                      <svg
+                        class="size-full"
+                        width="57"
+                        height="18"
+                        viewBox="0 0 47 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.75406 5.67921L6.07407 7.06647L5.45841 4.45188L7.50812 2.6927L4.80895 2.46211L3.75406 0L2.69917 2.46211L0 2.6927L2.04596 4.45188L1.43405 7.06647L3.75406 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M13.4689 5.67921L15.7889 7.06647L15.1732 4.45188L17.223 2.6927L14.5238 2.46211L13.4689 0L12.414 2.46211L9.71484 2.6927L11.7608 4.45188L11.1489 7.06647L13.4689 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M23.1877 5.67921L25.5077 7.06647L24.892 4.45188L26.9417 2.6927L24.2425 2.46211L23.1877 0L22.1328 2.46211L19.4336 2.6927L21.4796 4.45188L20.8676 7.06647L23.1877 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M32.9025 5.67921L35.2225 7.06647L34.6068 4.45188L36.6566 2.6927L33.9574 2.46211L32.9025 0L31.8476 2.46211L29.1484 2.6927L31.1944 4.45188L30.5825 7.06647L32.9025 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M42.6212 4.98372V1.52487L43.2632 3.0237L44.9075 3.16131L43.6611 4.23616L44.0328 5.82798L42.6212 4.98372ZM46.3753 2.6927L43.6761 2.46583L42.6212 0L41.5664 2.46583L38.8672 2.6927L40.9132 4.45188L40.3012 7.06647L42.6212 5.67921L44.9413 7.06647L44.3256 4.45188L46.3753 2.6927Z"
+                          fill="#FCD34D"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="texts">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                    aliquam, purus sit amet luctus venenatis, lectus magna
+                  </p>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="flex flex-wrap gap-4">
+                  <div class="max-w-11">
+                    <img
+                      class="object-contain rounded-full"
+                      src="../img/avatar1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="cd600">Aravind Pandey</h3>
+                    <p class="text-sm">@Sam.Payne90</p>
+                    <div class="flex w-full">
+                      <svg
+                        class="size-full"
+                        width="57"
+                        height="18"
+                        viewBox="0 0 47 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.75406 5.67921L6.07407 7.06647L5.45841 4.45188L7.50812 2.6927L4.80895 2.46211L3.75406 0L2.69917 2.46211L0 2.6927L2.04596 4.45188L1.43405 7.06647L3.75406 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M13.4689 5.67921L15.7889 7.06647L15.1732 4.45188L17.223 2.6927L14.5238 2.46211L13.4689 0L12.414 2.46211L9.71484 2.6927L11.7608 4.45188L11.1489 7.06647L13.4689 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M23.1877 5.67921L25.5077 7.06647L24.892 4.45188L26.9417 2.6927L24.2425 2.46211L23.1877 0L22.1328 2.46211L19.4336 2.6927L21.4796 4.45188L20.8676 7.06647L23.1877 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M32.9025 5.67921L35.2225 7.06647L34.6068 4.45188L36.6566 2.6927L33.9574 2.46211L32.9025 0L31.8476 2.46211L29.1484 2.6927L31.1944 4.45188L30.5825 7.06647L32.9025 5.67921Z"
+                          fill="#FCD34D"
+                        />
+                        <path
+                          d="M42.6212 4.98372V1.52487L43.2632 3.0237L44.9075 3.16131L43.6611 4.23616L44.0328 5.82798L42.6212 4.98372ZM46.3753 2.6927L43.6761 2.46583L42.6212 0L41.5664 2.46583L38.8672 2.6927L40.9132 4.45188L40.3012 7.06647L42.6212 5.67921L44.9413 7.06647L44.3256 4.45188L46.3753 2.6927Z"
+                          fill="#FCD34D"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="texts">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                    aliquam, purus sit amet luctus venenatis, lectus magna
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Ending of Review -->
+
+    <!-- Starting of banner -->
+    <section class="banner">
+      <div
+        class="flex md:flex-row flex-col justify-center items-center gap-x-10 container m-auto"
+      >
+        <div class="flex md:w-2/3 w-full">
+          <img
+            class="sm:block hidden object-contain w-full"
+            src="../img/new_landing/banner.svg"
+            alt="banner"
+          />
+          <img
+            class="sm:hidden block object-contain w-full"
+            src="../img/new_landing/banner-sm.svg"
+            alt="banner"
+          />
+        </div>
+        <div
+          class="md:w-1/3 w-full h-fit flex flex-col justify-center items-center mx-auto text-center text-white"
+        >
+          <p class="res-text-sm text-[#6A6F9F]">
+            Click below to open your live account and start trading with Trust
+            Capital now!
+          </p>
+          <a href="" class="trading w-full">Open Your Live Account</a>
+        </div>
+      </div>
+    </section>
+    <!-- Ending of banner -->
+
+    <!-- Starting of footer -->
+    <footer class="section-padding padding bg-[#151227]">
+      <div class="footer-container container m-auto">
+        <div class="flex-1">
+          <img
+            class="flex-shrink-0 min-w-16"
+            src="../img/logo.svg"
+            alt="logo"
+          />
+        </div>
+        <div class="flex-1">
+          <h1>Start Trading</h1>
+          <p>Account Opening</p>
+          <p>Deposit and Withdrawal</p>
+          <p>Practice Account</p>
+        </div>
+        <div class="flex-1">
+          <h1>Tools</h1>
+          <p>Metatrader 4 Platforms</p>
+          <p>Calculators</p>
+          <p>Economic Calendar</p>
+        </div>
+        <div class="flex-1">
+          <h1>Education</h1>
+          <p>Forex Seminar</p>
+          <p>Financial Glossary</p>
+        </div>
+        <div class="flex-1">
+          <h1>About Us</h1>
+          <p>About Trust Capital</p>
+          <p>Contact Us</p>
+        </div>
+      </div>
+      <div class="foot-platforms container m-auto">
+        <div class="item-container">
+          <div class="items">
+            <a href="#" class="apps">
+              <img
+                class="object-cover size-3"
+                src="../img/new_landing/windows.svg"
+                alt="windows"
+              />
+              Windows
+            </a>
+            <a href="#" class="apps">
+              <img
+                class="object-cover size-3"
+                src="../img/new_landing/apple.svg"
+                alt="apple"
+              />
+              Apple
+            </a>
+            <a href="#" class="apps">
+              <img
+                class="object-cover size-3"
+                src="../img/new_landing/android.svg"
+                alt="android"
+              />
+              Android
+            </a>
+          </div>
+          <div class="items res-text">
+            <a href="#"><i class="ion-logo-linkedin"></i></a>
+            <a href="#"><i class="ion-logo-instagram"></i></a>
+            <a href="#"><i class="ion-logo-twitter"></i></a>
+            <a href="#"><i class="ion-logo-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="text-white mt-10 text-center text-sm container m-auto hl400 tracking-wide"
+      >
+        <p>
+          Trust Capital Ltd is a Securities Dealer registered in Seychelles and
+          authorised by the
+          <a href="#" class="underline"
+            >Financial Services Authority (FSA) with license number SD122</a
+          >. The registered office of Trust Capital Ltd is at Room B11, First
+          Floor, Providence Complex, Providence, Mahe, Seychelles. Risk
+          disclaimer:Trading Leveraged Products such as Forex and Derivatives
+          may not be suitable for all investors as they carry a high degree of
+          risk and may result in a loss of all the invested capital rapidly.
+          Please ensure that you fully understand the risks involved, taking
+          into account your investments objectives and level of experience,
+          before trading, and if necessary, seek independent advice. Please read
+          the full Risk Statement.
+        </p>
+      </div>
+    </footer>
+    <!-- Ending of footer -->
+
+    <!-- SCRIPTS -->
+    <script src="../js/gsap-latest-beta.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="../js/landing.js"></script>
+  </body>
+</html>
